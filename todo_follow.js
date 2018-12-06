@@ -6,6 +6,7 @@ function qs (selector) {
     return document.querySelectorAll(selector)
 }
 
+
 function addNewTodo(event) {
     let todoField = q('#new-todo-field') //it gets the new-todo-field
     let newTodo = todoField.value //sets new-todo-field to newTodo
