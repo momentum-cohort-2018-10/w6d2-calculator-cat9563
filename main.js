@@ -13,8 +13,14 @@ function gq (selector){
 function num_but(selector, num){
     gq(selector).addEventListener('click', function(){
         gq('inputLabel').innerText += num
+        equal()
     })
 }
+
+function equal() {
+    gq('inputLabel').innerText = eval(gq('inputLabel').innerText)
+}
+
 
 num_but('seven','7')
 num_but('eight','8')
@@ -34,25 +40,24 @@ num_but('equals','=')
 num_but('div','/')
 num_but('C','AC')
 
-var inputLabel = document.getElementById('inputLabel');
 
-function clickBtn(obj) {
+// function clickBtn(obj) {
 
-    var clicked = obj.innerHTML;
+//     var clicked = obj.innerHTML;
 
-    if (clicked == 'equals') {
-        inputLabel.innerHTML = eval(inputLabel.innerHTML);
-    } else if (clicked == 'C') {
-        inputLabel.innerHTML = '0'
-    } else {
-        if (inputLabel.innerHTML == '0') {
-            inputLabel.innerHTML = clicked
-        } else {
-            inputLabel.innerHTML += clicked
-        }
-    }
-}
-
+//     if (clicked == 'equals') {
+//         gq('inputLabel').innerHTML = eval(gq('inputLabel').innerHTML);
+//     } else if (clicked == 'C') {
+//         gq('inputLabel').innerHTML = '0'
+//     } else {
+//         if (gq('inputLabel').innerHTML == '0') {
+//             gq('inputLabel').innerHTML = clicked
+//         } else {
+//             gq('inputLabel').innerHTML += clicked
+//         }
+//     }
+// }
+//var inputLabel = document.getElementById('inputLabel');
 
 // gq(selector).addEventListener('click', function(){
 //     gq('inputLabel').innerText += num
